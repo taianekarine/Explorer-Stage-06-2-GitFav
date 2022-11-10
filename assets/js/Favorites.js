@@ -11,7 +11,7 @@ export class Favorites {
     if(localStorage.getItem("@github-favorites:") == "[]") {
       this.root.querySelector('.doesnt-have-favorites').classList.remove('hide')
     } else {
-      this.root.querySelector('.doesnt-have-favorites').classList.add('hide')
+      // this.root.querySelector('.doesnt-have-favorites').classList.add('hide')
     }
    }
   
