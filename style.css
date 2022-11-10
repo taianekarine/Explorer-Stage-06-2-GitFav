@@ -109,6 +109,7 @@ button:hover path{
   margin: 0 auto;
   border-radius: 1.2rem;
   padding: 2rem;
+  
 }
 
 table * {
@@ -119,11 +120,13 @@ table * {
 
 table {
   width: 100%;
+  max-height: 22.4rem;
   border-collapse: collapse;
   border-top: 1px solid #4A808C;
   border-left: 1px solid #4A808C;
   border-right: 1px solid #4A808C;
   border-radius: 1.2rem;
+  overflow: scroll;
 }
 
 
@@ -149,6 +152,10 @@ thead tr {
 
 tbody tr:nth-child(odd) {
   background: var(--color-bg-line);
+}
+
+tr {
+  overflow: scroll;
 }
 
 table td {
