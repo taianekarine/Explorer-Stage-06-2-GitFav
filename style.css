@@ -7,9 +7,11 @@
 :root {
   font-size: 62.5%;
   --ff-primary: 'Roboto', sans-serif;
+  --ff-h1: 'Roboto Mono', monospace;
 
   --fs-placeholder: 1.6rem;
   --fs-table: 2rem;
+  --fs-h1: 3rem;
 
   --fc-btn-remove: #F75A68;
   --fc-txt-table: #E1E1E6;
@@ -17,13 +19,14 @@
   --fc-txt-placeholder: #7C7C8A;
   --fc-txt-btn-hover: #065E7C;
   --fc-txt-btn-remove-hover: #FE0015;
+  --fc-txt-h1: #4E5455;
 
   --color-bg-btn: #065E7C;
   --color-bg-btn-hover: #FFFFFF;
   --color-bg-hover: #FFFFFF;
   --color-bg-body: #000000;
   --color-bg-line: #06181C;
-  --color-bg-placeholder: #06181C;
+  --color-bg-placeholder: #092026;
   --color-bg-title-table: #092D38;
 
 }
@@ -41,6 +44,7 @@ header {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 8.7rem;
 }
 
 .sr-only {
@@ -56,19 +60,26 @@ header {
 }
 
 .logo-type {
-  margin-right: 29.3rem;
+  margin-right: 23rem;
 }
 
-input {
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.search input {
   width: 46.2rem;
   height: 4.8rem;
   margin-right: .8rem;
+  border-radius: .5rem;
   border: none;
   padding: 1.6rem;
   background: var(--color-bg-placeholder);
+  color: var(--fc-txt-placeholder)
 }
 
-header button {
+.search button {
   max-width: 20rem;
   height: 4.8rem;
   border: none;
@@ -96,28 +107,40 @@ button:hover path{
 #app {
   max-width: 112rem;
   margin: 0 auto;
+  border-radius: 1.2rem;
+  padding: 2rem;
 }
 
 table * {
   font-size: var(--fs-table);
   color: var(--fc-txt-table);
-  font-family: var(--ff-primary);
+  font-family: var(--ff-primary); 
 }
 
 table {
-  margin-top: 8.7rem;
   width: 100%;
-  border-radius: 1.2rem !important;
   border-collapse: collapse;
+  border-top: 1px solid #4A808C;
+  border-left: 1px solid #4A808C;
+  border-right: 1px solid #4A808C;
+  border-radius: 1.2rem;
 }
 
 
-/* td th {
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
 
+/* table td:first-child {
+  border-bottom-left-radius: 1.2rem;
+}
+
+table td:last-child {
+  border-bottom-right-radius: 1.2rem;
 } */
-table thead {
-  border-top-left-radius: 1.2rem !important;
-}
 
 thead tr {
   background: var(--color-bg-title-table);
@@ -133,10 +156,14 @@ table td {
   text-align: left;
 } 
 
+tbody td {
+  border-bottom: 1px solid #4A808C; 
+}
+
 td.user {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 td.user img {
@@ -170,3 +197,22 @@ tr td:nth-child(4) {
   color: var(--fc-txt-btn-remove-hover);
 }
 
+.doesnt-have-favorites {
+  display: none;
+  height: 62.4rem;
+  color: var(--fc-txt-h1);
+  font-size: var(--fs-h1);
+  font-family: var(--ff-h1);
+  line-height: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  border: 1px solid #4A808C; 
+}
+
+.hide {
+  display: none;
+}
