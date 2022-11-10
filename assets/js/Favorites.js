@@ -7,14 +7,6 @@ export class Favorites {
     this.onAddLine()
   }
 
-  clearInput() {
-    if(this.root.querySelector('.search input') == input.value ) {
-      return
-    } else {
-      this.root.querySelector('.doesnt-have-favorites').classList.add('hide')
-    }
-  }
-
   onAddLine() {
     if(localStorage.getItem("@github-favorites:") == "[]") {
       this.root.querySelector('.doesnt-have-favorites').classList.remove('hide')
