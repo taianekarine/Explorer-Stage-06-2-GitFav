@@ -5,6 +5,7 @@ export class Favorites {
     this.root = document.querySelector(root)
     this.load()
     this.onAddLine()
+    this.noLine() 
   }
 
   onAddLine() {
@@ -12,6 +13,12 @@ export class Favorites {
       this.root.querySelector('.doesnt-have-favorites').classList.remove('hide')
     } else {
       // this.root.querySelector('.doesnt-have-favorites').classList.add('hide')
+    }
+   }
+
+   noLine() {
+    if(localStorage.getItem("@github-favorites:") !== "[]") {
+      this.root.querySelector('.doesnt-have-favorites').classList.add('hide')
     }
    }
   
@@ -24,6 +31,7 @@ export class Favorites {
   save() {
     localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
     this.onAddLine()
+    this.noLine() 
     
   }
 
@@ -60,6 +68,7 @@ export class Favorites {
     this.update()
     this.save()
     this.onAddLine()
+    this.noLine() 
   
   }
 }
