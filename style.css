@@ -129,21 +129,13 @@ table {
   overflow: scroll;
 }
 
-
 table th:first-child {
   border-top-left-radius: 1.2rem;
 }
+
 table th:last-child {
   border-top-right-radius: 1.2rem;
 }
-
-/* table td:first-child {
-  border-bottom-left-radius: 1.2rem;
-}
-
-table td:last-child {
-  border-bottom-right-radius: 1.2rem;
-} */
 
 thead tr {
   background: var(--color-bg-title-table);
@@ -218,6 +210,22 @@ tr td:nth-child(4) {
   gap: 6rem;
 
   border: 1px solid #4A808C; 
+}
+
+table::-webkit-scrollbar-track {
+  background-color: #232C3B;
+}
+/* Fundo que corre */
+
+table::-webkit-scrollbar {
+  width: 6px;
+  background: #232C3B;
+}
+
+/* Linha que desce */
+table::-webkit-scrollbar-thumb {
+  background: #4A808C;
+  border-radius: 15px;
 }
 
 .hide {

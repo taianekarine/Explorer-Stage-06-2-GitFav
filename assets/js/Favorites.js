@@ -11,9 +11,7 @@ export class Favorites {
   onAddLine() {
     if(localStorage.getItem("@github-favorites:") == "[]") {
       this.root.querySelector('.doesnt-have-favorites').classList.remove('hide')
-    } else {
-      // this.root.querySelector('.doesnt-have-favorites').classList.add('hide')
-    }
+    } 
    }
 
    noLine() {
@@ -54,6 +52,8 @@ export class Favorites {
       this.entries = [user, ...this.entries]
       this.update()
       this.save()
+      const inputValue = document.querySelector('.search input')
+      inputValue.value = ""
 
     } catch(error) {
       alert(error.message)
